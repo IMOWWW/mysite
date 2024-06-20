@@ -1,0 +1,17 @@
+
+services:
+  web:
+    build: .
+    container_name: mysite-web
+    restart: always
+    command: bash entrypoint.sh
+    volumes:
+      - .:/app
+      - ./static:/app/static
+      - ./media:/app/media
+    ports:
+      - 8000:8000
+
+    
+
+
